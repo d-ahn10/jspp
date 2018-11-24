@@ -25,16 +25,27 @@ function igpayAtinlay(str){
     let eachWord = str.split(' ');
     for(let wordIndex = 0; wordIndex < eachWord.length; wordIndex++){
         let eachFirstLetter = eachWord[wordIndex][0];
-        // console.log('inside first function line 27: ', eachFirstLetter);
+        // console.log('inside first function line 5: ', eachFirstLetter);
         if(eachFirstLetter){
-            console.log(eachFirstLetter);
+            // console.log('line 7: ', eachWord);
             let vowelCheck = vowelChecker(eachFirstLetter);
+			// let unshiftFirstLetter = eachWord[wordIndex].slice(0,1);
+			// console.log('line 10: ', eachFirstLetter);
+			// console.log('line 11: ', unshiftFirstLetter);
+			let eachStr = eachWord[wordIndex].slice(-4);
+			// console.log(eachStr.slice(-4));
+			console.log("line 14: ");
+			eachStr += "ay";
+			console.log(eachStr);
+			//grab the length minus the difference of character spaces
+
             if(eachFirstLetter === vowelCheck){
-                console.log('line 33 running; also vowelCheck: ', vowelCheck);
+                // console.log('line 33 running; also vowelCheck: ', vowelCheck);
+				// will run once for words starting with a vowel
             }
         }
     }
-    return eachWord;
+    return;
 }
 
 function vowelChecker(passVowel){
@@ -42,11 +53,10 @@ function vowelChecker(passVowel){
     for(let vowelIndex = 0; vowelIndex < vowels.length; vowelIndex++){
         let eachVowel = vowels[vowelIndex];
         if(passVowel === eachVowel){
-            console.log('line 45: ', eachVowel);
+            // console.log(' inside helper function line 25: ', eachVowel);
             return eachVowel;
         }
     }
 }
 
-igpayAtinlay('Hello there apple');
-
+igpayAtinlay('Hello there apple chicken');
