@@ -16,3 +16,23 @@
 // add that ASCII value into the output/result sentence
 // print out the final output/result
 
+var strExample = 'the cat in the hat';
+
+function character_convert(str){
+    var index = 0;
+    var output = "";
+    while(str.length > index){
+        var eachLetter = str[index];
+          if(eachLetter === " "){
+            index++
+            continue;
+          } else {
+            output += eachLetter;
+            index++;
+            console.log('line 13: ', output);
+          }
+    }
+    return console.log('end of conversion');
+}
+
+character_convert(strExample);
