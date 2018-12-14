@@ -22,7 +22,7 @@ function character_convert(str){
     var index = 0;
     var output = "";
     while(str.length > index){
-        var eachLetter = str[index];
+        var eachLetter = str.charCodeAt(index);
           if(eachLetter === " "){
             index++
             continue;
@@ -36,3 +36,5 @@ function character_convert(str){
 }
 
 character_convert(strExample);
+
+//works!
